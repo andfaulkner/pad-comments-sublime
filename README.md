@@ -9,6 +9,12 @@ _Note: This is a new package and is subject to minor changes in behavior._
 Installation
 ------------
 
+### Automatic Installation using Package Control
+
+Pad can be installed using the [Sublime Package Control](http://wbond.net/sublime_packages/package_control) package manager plug-in. Use the command palette to launch the "Package Control: Install Package" command and search for Pad.
+
+### Manual Installation
+
 Install by cloning this repository to your Packages directory.
 
 * For Windows:
@@ -30,7 +36,7 @@ How to Use
 First, move the cursor to the line you want to pad or select the region of text
 in the line that should be padded. You may use multiple cursors to pad multiple
 lines at once. Then, use the command palette (`Ctrl+Shift+P`) to find and run
-the command with the caption "Pad: Add Padding to Line or Selection". You will
+the "Pad: Add Padding to Line or Selection" command. You will
 be prompted for alignment and fill character. The line/selected text will be
 padded with the fill character up to the first ruler (or column 80 if no rulers
 are being used).
@@ -49,14 +55,14 @@ Examples
 * Use multiple selections to batch pad.
 
         /* This is some text. */
-		/* This is some more text. */
-		/* And here is even more text. */
+        /* This is some more text. */
+        /* And here is even more text. */
 
  becomes
 
         /* -----------------------This is some text.----------------------- */
-		/* --------------------This is some more text.--------------------- */
-		/* ------------------And here is even more text.------------------- */
+        /* --------------------This is some more text.--------------------- */
+        /* ------------------And here is even more text.------------------- */
 
 * Perform the command on an empty line to fill the entire line with a character.
 
