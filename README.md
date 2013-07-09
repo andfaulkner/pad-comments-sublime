@@ -4,7 +4,7 @@ Pad
 Pad is a [Sublime Text 2](http://www.sublimetext.com/) plug-in to add custom
 padding to lines.
 
-_Note: This is a new package and is subject to minor changes in behavior._
+**Update:** Sublime Text 3 Beta (Build 3047) is supported.
 
 Installation
 ------------

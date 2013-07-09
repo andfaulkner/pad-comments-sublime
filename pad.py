@@ -46,7 +46,7 @@ class PromptPadCommand(sublime_plugin.WindowCommand):
     def _on_prompt_align_done(self, index):
         """Called after the user has selected the text alignment."""
         if index < 0: return
-        self._command_args['align'] = Alignment[Alignment.keys()[index]]
+        self._command_args['align'] = Alignment[list(Alignment.keys())[index]]
         self._state += 1
         self._prompt_control()
 
