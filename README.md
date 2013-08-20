@@ -1,10 +1,10 @@
 Pad
 ===
 
-Pad is a [Sublime Text 2](http://www.sublimetext.com/) plug-in to add custom
+Pad is a [Sublime Text](http://www.sublimetext.com/) plug-in to add custom
 padding to lines.
 
-**Update:** Sublime Text 3 Beta (Build 3047) is supported.
+**Update:** Sublime Text 3 is supported.
 
 Installation
 ------------
