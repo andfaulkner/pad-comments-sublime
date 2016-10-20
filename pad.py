@@ -11,6 +11,11 @@ Alignment = {
     'right':  2
 }
 
+def get_setting(key, default=None):
+    settings = sublime.load_settings('Pad-JS-Comments.sublime-settings')
+    requested_setting = settings.get(key, default) # settings.get(key, default)
+    return requested_setting
+
 class PromptPadCommand(sublime_plugin.WindowCommand):
     """
     Prompts the user for the alignment and fill character, then runs the
@@ -67,11 +72,19 @@ class PadCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, fill_char='-', align=Alignment['center'], width=None):
         """Called when the command is run."""
-        # Determine total pad width.
-        if width is None:
+        # Get width setting
+        width_setting = get_setting('width', None)
+        # If a width setting was present, set the padding width to it
+        if (width_setting is not None):
+            width = int(width_setting)
+
+        # If width setting did not find a value, check user ruler settings
+        if (width is None):
             try:
-                # Use the first ruler if available.
-                width = int(self.view.settings().get('rulers')[0])
+                # Use the last ruler listed if there's more than one
+                rulers = self.view.settings().get('rulers')
+                width = int(rulers[len(rulers) - 1])
+                print("width: " + str(width))
             except IndexError:
                 width = self.DEFAULT_WIDTH
 
@@ -96,5 +109,6 @@ class PadCommand(sublime_plugin.TextCommand):
 
             # Generate the final line contents and insert it.
             format_str = '{0:%s%s%d}' % (fill_char, align_char, format_width)
-            formatted_str = format_str.format(contents or fill_char)
+            formatted_str = "/*" + format_str.format(contents or fill_char) + "*/"
             self.view.replace(edit, replace_region, formatted_str)
+            print(width_setting)
