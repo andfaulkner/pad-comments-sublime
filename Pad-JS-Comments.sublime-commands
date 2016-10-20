@@ -1,0 +1,10 @@
+[
+	{
+  	"caption": "Pad: Add Padding to Line or Selection",
+  	"command": "prompt_pad"
+	},
+  {
+    "caption": "Pad: Centre pad line or selection with * character",
+    "command": "pad"
+  }
+]
