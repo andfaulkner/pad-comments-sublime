@@ -13,10 +13,10 @@ Alignment = {
 
 def get_setting(key, default=None):
     """
-    Get requested setting out of the .sublime-settings file
+    Get requested setting out of the .sublime-settings file.
     """
     settings = sublime.load_settings('Pad-JS-Comments.sublime-settings')
-    requested_setting = settings.get(key, default) # settings.get(key, default)
+    requested_setting = settings.get(key, default)
     return requested_setting
 
 class PromptPadCommand(sublime_plugin.WindowCommand):
@@ -67,8 +67,11 @@ class PromptPadCommand(sublime_plugin.WindowCommand):
 
 class PadCommand(sublime_plugin.TextCommand):
     """
-    Pad the selected text (or entire line) with a fill character up to the
-    first ruler (or column 80 if no rulers are being used).
+    Pad the selected text (or entire line) with a fill char up to the column
+    corresponding to one of the following values (in order of precedence):
+        1) The width setting in "Pad-JS-Comments.sublime-settings";
+        2) The last ruler defined by the user; or
+        3) Column 80 (default if no setting is given and no rulers defined)
     """
 
     DEFAULT_WIDTH = 80
@@ -88,6 +91,7 @@ class PadCommand(sublime_plugin.TextCommand):
                 rulers = self.view.settings().get('rulers')
                 width = int(rulers[len(rulers) - 1])
             except IndexError:
+                print('WARNING: Invalid width setting in Pad-JS-Comments.sublime-settings')
                 width = self.DEFAULT_WIDTH
 
         # Account for the upcoming pad characters added to the final output (ahead)
