@@ -1,0 +1,8 @@
+{
+	"width": 100,
+  "fill_char": "*",
+  "left_char": "/",
+  "right_char": "/",
+  "strip": true,
+  "all_caps": true
+}

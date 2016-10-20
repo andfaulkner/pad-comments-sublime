@@ -15,7 +15,7 @@ def get_setting(key, default=None):
     """
     Get requested setting out of the .sublime-settings file.
     """
-    settings = sublime.load_settings('Pad-JS-Comments.sublime-settings')
+    settings = sublime.load_settings('Pad-Comments.sublime-settings')
     requested_setting = settings.get(key, default)
     return requested_setting
 
@@ -69,15 +69,25 @@ class PadCommand(sublime_plugin.TextCommand):
     """
     Pad the selected text (or entire line) with a fill char up to the column
     corresponding to one of the following values (in order of precedence):
-        1) The width setting in "Pad-JS-Comments.sublime-settings";
+        1) The width setting in "Pad-Comments.sublime-settings";
         2) The last ruler defined by the user; or
         3) Column 80 (default if no setting is given and no rulers defined)
     """
 
     DEFAULT_WIDTH = 80
+    DEFAULT_FILL_CHAR = "*"
+    DEFAULT_LEFT_EDGE_CHAR = "/"
+    DEFAULT_RIGHT_EDGE_CHAR = "/"
 
     def run(self, edit, fill_char='*', align=Alignment['center'], width=None):
         """Called when the command is run."""
+        # Get fill character setting
+        fill_char = get_setting('fill_char', self.DEFAULT_FILL_CHAR)
+
+        # Get setting for bookend characters (left and right edges)
+        left_char = get_setting('left_char', self.DEFAULT_LEFT_EDGE_CHAR)
+        right_char = get_setting('right_char', self.DEFAULT_RIGHT_EDGE_CHAR)
+
         # Get width setting
         width_setting = get_setting('width', None)
         # If a width setting was present, set the padding width to it
@@ -91,12 +101,12 @@ class PadCommand(sublime_plugin.TextCommand):
                 rulers = self.view.settings().get('rulers')
                 width = int(rulers[len(rulers) - 1])
             except IndexError:
-                print('WARNING: Invalid width setting in Pad-JS-Comments.sublime-settings')
+                print('WARNING: Invalid width setting in Pad-Comments.sublime-settings')
                 width = self.DEFAULT_WIDTH
 
         # Account for the upcoming pad characters added to the final output (ahead)
         # Also adds 1-space buffer to avoid thwacking the max allowed line width
-        width = width - 5
+        width = width - len(left_char) - len(right_char)
 
         # Determine the alignment character to be used in the format string.
         if   align == Alignment['left']:   align_char = '<'
@@ -119,8 +129,18 @@ class PadCommand(sublime_plugin.TextCommand):
 
             # Generate the final line contents and insert it.
             format_str = '{0:%s%s%d}' % (fill_char, align_char, format_width)
-            # Slightly pad the selected content
-            spaced_contents = " " + contents + " "
 
-            formatted_str = "/*" + format_str.format(spaced_contents or fill_char) + "*/"
+            # Strip preceding & trailing whitespace chars if setting 'strip' is true
+            if (get_setting('strip') is True):
+                contents = contents.strip()
+
+            # Convert string to all-caps if setting 'all_caps' is true
+            if (get_setting('all_caps') is True):
+                contents = contents.upper()
+
+            # Slightly pad the selected content
+            spaced_content = " " + contents + " "
+            prepped_content = format_str.format(spaced_content or fill_char)
+
+            formatted_str = left_char + prepped_content + right_char
             self.view.replace(edit, replace_region, formatted_str)
