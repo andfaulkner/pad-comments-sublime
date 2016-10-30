@@ -1,5 +1,5 @@
 Pad-Comments
-===============
+============
 
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
 JS comment to a line. For example, if the command is run with the following text selected:
