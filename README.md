@@ -2,13 +2,15 @@ Pad-Comments
 ============
 
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
-JS comment to a line. For example, if the command is run with the following text selected:
+comment to a line. For example, if the command is run with the following text selected (and
+default settings):
 
         Life, The Universe, Everything
 
 ...the result will be:
 
-        /********************** LIFE, THE UNIVERSE, EVERYTHING ***********************/
+
+        /********************************* LIFE, THE UNIVERSE, EVERYTHING *********************************/
 
 ...where the actual width of the padding corresponds either to a provided package-specific width
 setting, the last ruler you defined in your user settings, or 80 spaces.
