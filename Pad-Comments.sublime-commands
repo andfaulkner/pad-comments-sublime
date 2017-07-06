@@ -4,7 +4,7 @@
   	"command": "prompt_pad"
 	},
   {
-    "caption": "Pad: Centre pad line or selection with * character",
+    "caption": "Pad: Centre pad line or selection with characters defined in Pad-Comments settings",
     "command": "pad"
   }
 ]

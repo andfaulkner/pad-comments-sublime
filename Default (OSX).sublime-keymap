@@ -1,3 +1,4 @@
 [
-	{ "keys": ["command+alt+ctrl+p"], "command": "pad" }
+	{ "keys": ["command+alt+ctrl+p"], "command": "pad" },
+    { "keys": ["command+alt+ctrl+h"], "command": "three_line_pad_header" }
 ]
