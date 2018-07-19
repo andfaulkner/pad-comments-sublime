@@ -6,91 +6,41 @@
     "strip": true,
     "all_caps": true,
     "syntax_specific": {
-        "clojure": {
-            "left_char": ";",
-            "fill_char": "*",
-            "right_char": ";"
-        },
-        "coffeescript": {
-            "left_char": "#",
-            "fill_char": "*",
-            "right_char": "#"
-        },
-        "css": {
-            "left_char": "/*",
-            "fill_char": "*",
-            "right_char": "*/"
-        },
-        "elm": {
-            "left_char": "-",
-            "fill_char": "-",
-            "right_char": "-"
-        },
-        "html": {
-            "left_char": "<!--",
-            "fill_char": "*",
-            "right_char": "-->",
-            "width": 99
-        },
-        "javascript": {
-            "left_char": "/",
-            "fill_char": "*",
-            "right_char": "/"
-        },
-        "javascriptnext": {
-            "left_char": "/",
-            "fill_char": "*",
-            "right_char": "/"
-        },
-        "javascript (babel)": {
-            "left_char": "/",
-            "fill_char": "*",
-            "right_char": "/"
-        },
-        "postcss": {
-            "left_char": "/*",
-            "fill_char": "*",
-            "right_char": "*/"
-        },
-        "python": {
-            "left_char": "#",
-            "fill_char": "*",
-            "right_char": "#"
-        },
-        "ruby": {
-            "left_char": "#",
-            "fill_char": "*",
-            "right_char": "#"
-        },
-        "sass": {
-            "left_char": "/*",
-            "fill_char": "*",
-            "right_char": "*/"
-        },
-        "scss": {
-            "left_char": "/*",
-            "fill_char": "*",
-            "right_char": "*/"
-        },
-        "shell-unix-generic": {
-            "left_char": "#",
-            "fill_char": "#",
-            "right_char": "#"
-        },
-        "sql": {
-            "left_char": "-",
-            "fill_char": "-",
-            "right_char": "-"
-        },
-        "typescript": {
-            "left_char": "/",
-            "fill_char": "*",
-            "right_char": "/"
-        },
-        "TypescriptReact": {
-            "left_char": "/",
-            "fill_char": "*",
-            "right_char": "/"
-        },
+        "bash":                   { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "clojure":                { "left_char": ";", "fill_char": "*", "right_char": ";" },
+        "coffeescript":           { "left_char": "#", "fill_char": "*", "right_char": "#" },
+        "css":                    { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "elm":                    { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "Git Config":             { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "Git Ignore":             { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "gitconfig":              { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "gitignore":              { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "Haskell-SublimeHaskell": { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "Haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "javascript":             { "left_char": "/", "fill_char": "*", "right_char": "/" },
+        "JavaScript (Rails)":     { "left_char": "/", "fill_char": "*", "right_char": "/" },
+        "javascriptnext":         { "left_char": "/", "fill_char": "*", "right_char": "/" },
+        "javascript (babel)":     { "left_char": "/", "fill_char": "*", "right_char": "/" },
+        "LESS":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "postcss":                { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "python":                 { "left_char": "#", "fill_char": "*", "right_char": "#" },
+        "Python3":                { "left_char": "#", "fill_char": "*", "right_char": "#" },
+        "ruby":                   { "left_char": "#", "fill_char": "*", "right_char": "#" },
+        "Ruby on Rails":          { "left_char": "#", "fill_char": "*", "right_char": "#" },
+        "sass":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "scss":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "sh":                     { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "shell":                  { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "shell-unix-generic":     { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "sql":                    { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "typescript":             { "left_char": "/", "fill_char": "*", "right_char": "/" },
+        "TypescriptReact":        { "left_char": "/", "fill_char": "*", "right_char": "/" },
+
+        "html": { "left_char": "<!--",
+                  "fill_char": "*",
+                  "right_char": "-->",
+                  "width": 99
+        }
     }
 }
