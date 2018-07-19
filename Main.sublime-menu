@@ -17,7 +17,7 @@
                         [
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/Pad-Comments/Pad-Comments.sublime-settings"},
+                                "args": {"file": "${packages}/pad-comments-sublime/Pad-Comments.sublime-settings"},
                                 "caption": "Settings – Default"
                             },
                             {
