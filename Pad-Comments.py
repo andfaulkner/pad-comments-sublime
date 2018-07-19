@@ -1,8 +1,8 @@
 """
-Pad: A Sublime Text 2 plug-in to add custom padding to lines.
-Matthew Borgerson <mborgerson@gmail.com>
+Pad: A Sublime Text 3 plug-in to add custom padding to lines.
+Andrew Faulkner<andfaulkner@gmail.com>
+(Adapted from code by Matthew Borgerson <mborgerson@gmail.com>)
 """
-
 import sublime, sublime_plugin
 import os
 import re
@@ -27,7 +27,8 @@ def get_def_setting(key, placeholder, default=None):
 
 def get_current_syntax(view):
     current_syntax = view.settings().get('syntax')
-    return re.search(r"[^\/]+((?=\.sublime-syntax)|(?=\.tmLanguage))", current_syntax).group(0)
+    syn_name = re.search(r"[^\/]+((?=\.sublime-syntax)|(?=\.tmLanguage))", current_syntax).group(0)
+    return syn_name
 
 def select_setting(key, current_syntax_settings, default=''):
     """
@@ -200,7 +201,6 @@ class PadCommand(sublime_plugin.TextCommand):
         """
         Called when the command is run.
         """
-        print("running yay")
         current_syntax = get_current_syntax(self.view).lower()
 
         syntax_settings = get_default_setting('syntax_specific')
