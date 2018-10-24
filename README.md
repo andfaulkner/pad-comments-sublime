@@ -1,8 +1,6 @@
 Pad-Comments
 ============
 
-Description
------------
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
 comment to a line. For example, if the command is run in a JS file with the following text
 selected (and default settings):
@@ -21,6 +19,7 @@ This allows you to easily insert 'heading' comments in Javascript files, with th
 precisely centered.
 
 
+
 ----------------------------------------------------------------------------------------------------
 Installation
 ------------
@@ -30,19 +29,20 @@ Pad-Comments can be installed using the [Sublime Package Control](http://wbond.n
 ### Manual installation
 Install by cloning this repository to your Packages directory.
 
-* For Windows:
+For Windows:
 ```
 cd "%APPDATA%\Sublime Text 3\Packages"
 git clone https://github.com/andfaulkner/pad-comments-sublime.git
 ```
 
-*   For Mac OS X:
+For Mac OS X:
 ```
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 git clone https://github.com/andfaulkner/pad-comments-sublime.git
 ```
 
 After cloning the repository to your packages directory, Sublime Text should automatically load the package.
+
 
 
 ----------------------------------------------------------------------------------------------------
@@ -59,12 +59,12 @@ You can also use the command-alt-ctrl-p hotkey to automatically centre pad your
 selection (or the whole row).
 
 
+
 ----------------------------------------------------------------------------------------------------
 More examples
 -------------
-### Centre pad line or selection with * character
-
-* Use no selection to pad the entire line. With the default settings, the following example: 
+### Centre pad line or selection with default characters
+Use no selection to pad the entire line. With the default settings, in a JS file the following example: 
 ```
 Redux wrappers
 ```
@@ -73,8 +73,7 @@ Redux wrappers
 /***************************************** REDUX WRAPPERS ****************************************/
 ```
 
-*   Punctuation is preserved. E.g. (with default settings):
-
+Punctuation is preserved. E.g. (with default settings):
 ```
 Run! It's a bear eating a stick of butter!!!
 ```
@@ -82,19 +81,19 @@ Run! It's a bear eating a stick of butter!!!
 ```
 /************************** RUN! IT'S A BEAR EATING A STICK OF BUTTER!! ***************************/
 ```
+*   The same results occur if you select all text on the line.
 
-*   The same results occurs if you select all text on the line.
 
-*   The action automatically strips preceding & trailing whitespace, and capitalizes all characters (these can be turned off in settings). E.g.:
+The action automatically strips preceding & trailing whitespace, and capitalizes all characters (these can be turned off in settings). E.g.:
 ```
-Third-party components
+      Third-party components   
 ```
    ...becomes:
 ```
 /************************************ THIRD-PARTY COMPONENTS *************************************/
 ```
 
-*   The fill character, left-edge character, and right-edge character can all be customized, and the padding width can be defined. E.g. if your settings are:
+The fill character, left-edge character, and right-edge character can all be customized, and the padding width can be defined. E.g. if your settings are:
 ```
 {
     "width": 80,
@@ -105,8 +104,7 @@ Third-party components
     "right_char": "$"
 }
 ```
-
-...then the following sample text:
+   ...then the following sample text:
 ```
 Gr, argh
 ```
@@ -114,6 +112,7 @@ Gr, argh
 ````
 -################################# GR, ARGH ##################################$
 ````
+
 
 ### Add padding to line or selection
 To pad around all text on a line, perform action with no text selected:
@@ -125,20 +124,22 @@ This is some text.
 /***************************** THIS IS SOME TEXT. *****************************/
 ```
 
-*   Use multiple selections to batch pad:
+### Use multiple selections to batch pad
+If the entire following block (in a JS file) is selected when the action is run:
 ```
-/* This is some text. */
-/* This is some more text. */
-/* And here is even more text. */
+This is some text.
+This is some more text.
+And here is even more text.
 ```
-   ...becomes:
+   ...it becomes:
 ```
-/* ----------------------- This is some text. ----------------------- */
-/* -------------------- This is some more text. --------------------- */
-/* ------------------ And here is even more text. ------------------- */
+/************************* This is some text. *************************/
+/********************** This is some more text. ***********************/
+/******************** And here is even more text. *********************/
 ```
 
-* Perform the command on an empty line to fill the entire line with a character.
+### Fill an entire line with a character
+Perform the command on an empty line (with nothing selected) to fill an entire line with a character. e.g.:
 ```
  
 ```
@@ -146,6 +147,7 @@ This is some text.
 ```
 **********************************************************************
 ```
+
 
 
 ----------------------------------------------------------------------------------------------------
