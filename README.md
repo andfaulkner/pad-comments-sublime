@@ -1,8 +1,9 @@
 Pad-Comments
 ============
 
-TODO :: Edit README - it's out of date and still has some vestiges of the original codebase at the point it was first forked
-TODO :: Republish on the Sublime Package Control repository
+TODO :: Edit README - it's out of date and still has some vestiges of the original codebase at the point it was first forked.
+
+TODO :: Republish on the Sublime Package Control repository.
 
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
 comment to a line. For example, if the command is run with the following text selected (and
