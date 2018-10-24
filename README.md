@@ -1,12 +1,6 @@
 Pad-Comments
 ============
 
-TODOs
------
-*   TODO: Edit README. It's out of date and still has some vestiges of the original codebase at the point it was forked.
-*   TODO: Republish on the Sublime Package Control repository.
-
-
 Description
 -----------
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
@@ -15,8 +9,7 @@ selected (and default settings):
 ```
 Life, The Universe, Everything
 ```
-
-...the result will be:
+   ...the result will be:
 ```
 /********************************* LIFE, THE UNIVERSE, EVERYTHING *********************************/
 ```
@@ -28,6 +21,7 @@ This allows you to easily insert 'heading' comments in Javascript files, with th
 precisely centered.
 
 
+----------------------------------------------------------------------------------------------------
 Installation
 ------------
 ### Automatic installation using Package Control
@@ -51,6 +45,7 @@ git clone https://github.com/andfaulkner/pad-comments-sublime.git
 After cloning the repository to your packages directory, Sublime Text should automatically load the package.
 
 
+----------------------------------------------------------------------------------------------------
 How to use
 ----------
 First, move the cursor to the line you want to pad or select the region of text
@@ -64,6 +59,7 @@ You can also use the command-alt-ctrl-p hotkey to automatically centre pad your
 selection (or the whole row).
 
 
+----------------------------------------------------------------------------------------------------
 More examples
 -------------
 ### Centre pad line or selection with * character
@@ -72,8 +68,7 @@ More examples
 ```
 Redux wrappers
 ```
-
-...becomes:
+   ...becomes:
 ```
 /***************************************** REDUX WRAPPERS ****************************************/
 ```
@@ -83,8 +78,7 @@ Redux wrappers
 ```
 Run! It's a bear eating a stick of butter!!!
 ```
-
-...becomes:
+   ...becomes:
 ```
 /************************** RUN! IT'S A BEAR EATING A STICK OF BUTTER!! ***************************/
 ```
@@ -95,8 +89,7 @@ Run! It's a bear eating a stick of butter!!!
 ```
 Third-party components
 ```
-
-...becomes:
+   ...becomes:
 ```
 /************************************ THIRD-PARTY COMPONENTS *************************************/
 ```
@@ -117,8 +110,7 @@ Third-party components
 ```
 Gr, argh
 ```
-
-...becomes:
+   ...becomes:
 ````
 -################################# GR, ARGH ##################################$
 ````
@@ -128,7 +120,7 @@ To pad around all text on a line, perform action with no text selected:
 ```
 This is some text.
 ```
-... becomes:
+   ...becomes:
 ```
 /***************************** THIS IS SOME TEXT. *****************************/
 ```
@@ -139,8 +131,7 @@ This is some text.
 /* This is some more text. */
 /* And here is even more text. */
 ```
-
-...becomes:
+   ...becomes:
 ```
 /* ----------------------- This is some text. ----------------------- */
 /* -------------------- This is some more text. --------------------- */
@@ -151,13 +142,13 @@ This is some text.
 ```
  
 ```
-
-...becomes:
+   ...becomes:
 ```
 **********************************************************************
 ```
 
 
+----------------------------------------------------------------------------------------------------
 Limitations
 -----------
 ### Issues with padding around selected text
@@ -169,3 +160,9 @@ Limitations
 *   Padding only works for one region of text per line.
 *   Multi-line selection padding does not work properly.
     *   Workaround: Use multiple cursors / multiple single-line selections to pad multiple lines at once.
+
+
+----------------------------------------------------------------------------------------------------
+TODOs
+-----
+*   TODO: Republish on the Sublime Package Control repository.
