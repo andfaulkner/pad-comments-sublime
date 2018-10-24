@@ -93,6 +93,9 @@ The action automatically strips preceding & trailing whitespace, and capitalizes
 /************************************ THIRD-PARTY COMPONENTS *************************************/
 ```
 
+### Customize padding behaviour
+TODO Finish "Customize padding behaviour" docs to include new settings
+
 The fill character, left-edge character, and right-edge character can all be customized, and the padding width can be defined. E.g. if your settings are:
 ```
 {
