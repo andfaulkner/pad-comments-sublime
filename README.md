@@ -1,20 +1,25 @@
 Pad-Comments
 ============
 
-TODO :: Edit README - it's out of date and still has some vestiges of the original codebase at the point it was first forked.
+TODOs
+-----
+*   TODO: Edit README. It's out of date and still has some vestiges of the original codebase at the point it was forked.
+*   TODO: Republish on the Sublime Package Control repository.
 
-TODO :: Republish on the Sublime Package Control repository.
 
+Description
+-----------
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
-comment to a line. For example, if the command is run with the following text selected (and
-default settings):
-
-        Life, The Universe, Everything
+comment to a line. For example, if the command is run in a JS file with the following text
+selected (and default settings):
+```
+Life, The Universe, Everything
+```
 
 ...the result will be:
-
-
-        /********************************* LIFE, THE UNIVERSE, EVERYTHING *********************************/
+```
+/********************************* LIFE, THE UNIVERSE, EVERYTHING *********************************/
+```
 
 ...where the actual width of the padding corresponds either to a provided package-specific width
 setting, the last ruler you defined in your user settings, or 80 spaces.
@@ -22,140 +27,145 @@ setting, the last ruler you defined in your user settings, or 80 spaces.
 This allows you to easily insert 'heading' comments in Javascript files, with the 'section' title
 precisely centered.
 
+
 Installation
 ------------
-
-### Automatic Installation using Package Control
-
+### Automatic installation using Package Control
 Pad-Comments can be installed using the [Sublime Package Control](http://wbond.net/sublime_packages/package_control) package manager plug-in. Use the command palette to launch the "Package Control: Install Package" command and search for Pad.
 
-### Manual Installation
-
+### Manual installation
 Install by cloning this repository to your Packages directory.
 
 * For Windows:
+```
+cd "%APPDATA%\Sublime Text 3\Packages"
+git clone https://github.com/andfaulkner/pad-comments-sublime.git
+```
 
-        cd "%APPDATA%\Sublime Text 3\Packages"
-        git clone https://github.com/andfaulkner/pad-comments-sublime.git
+*   For Mac OS X:
+```
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+git clone https://github.com/andfaulkner/pad-comments-sublime.git
+```
 
-* For Mac OS X:
+After cloning the repository to your packages directory, Sublime Text should automatically load the package.
 
-        cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-        git clone https://github.com/andfaulkner/pad-comments-sublime.git
 
-After cloning the repository to your packages directory, Sublime Text should
-automatically load the package.
-
-How to Use
+How to use
 ----------
-
 First, move the cursor to the line you want to pad or select the region of text
 in the line that should be padded. You may use multiple cursors to pad multiple
 lines at once. Then, use the command palette (`Ctrl+Shift+P`) to find and run
-the "Pad: Add Padding to Line or Selection" command. You will
-be prompted for alignment and fill character. The line/selected text will be
-padded with the fill character up to the first ruler (or column 80 if no rulers
-are being used).
+the "Pad: Add Padding to Line or Selection" command. You will be prompted for
+alignment and fill character. The line/selected text will be padded with the
+fill character up to the first ruler (or column 80 if no rulers are being used).
 
 You can also use the command-alt-ctrl-p hotkey to automatically centre pad your
 selection (or the whole row).
 
-More Examples
--------------
 
-###Pad: centre pad line or selection with * character
+More examples
+-------------
+### Centre pad line or selection with * character
 
 * Use no selection to pad the entire line. With the default settings, the following example: 
+```
+Redux wrappers
+```
 
-        Redux wrappers
+...becomes:
+```
+/***************************************** REDUX WRAPPERS ****************************************/
+```
 
-  ...becomes:
+*   Punctuation is preserved. E.g. (with default settings):
 
-        /***************************************** REDUX WRAPPERS ****************************************/
+```
+Run! It's a bear eating a stick of butter!!!
+```
 
-* Punctuation is preserved. E.g. (with default settings):
+...becomes:
+```
+/************************** RUN! IT'S A BEAR EATING A STICK OF BUTTER!! ***************************/
+```
 
-        Run away! It's a bear eating a stick of butter!!!
+*   The same results occurs if you select all text on the line.
 
-  ...becomes:
+*   The action automatically strips preceding & trailing whitespace, and capitalizes all characters (these can be turned off in settings). E.g.:
+```
+Third-party components
+```
 
-        /*********************** RUN AWAY! IT'S A BEAR EATING A STICK OF BUTTER!!! ************************/
+...becomes:
+```
+/************************************ THIRD-PARTY COMPONENTS *************************************/
+```
 
+*   The fill character, left-edge character, and right-edge character can all be customized, and the padding width can be defined. E.g. if your settings are:
+```
+{
+    "width": 80,
+    "fill_char": "-"
+    "all_caps": true,
+    "strip": true,
+    "left_char": "#",
+    "right_char": "$"
+}
+```
 
-* The same results occurs if you select all text on the line.
+...then the following sample text:
+```
+Gr, argh
+```
 
-* The action automatically strips preceding and trailing whitespace, and capitalizes all characters (these can be turned off in settings). E.g.:
+...becomes:
+````
+-################################# GR, ARGH ##################################$
+````
 
-                Third-party components
+### Add padding to line or selection
+To pad around all text on a line, perform action with no text selected:
+```
+This is some text.
+```
+... becomes:
+```
+/***************************** THIS IS SOME TEXT. *****************************/
+```
 
-  ...becomes:
+*   Use multiple selections to batch pad:
+```
+/* This is some text. */
+/* This is some more text. */
+/* And here is even more text. */
+```
 
-        /************************************ THIRD-PARTY COMPONENTS *************************************/
-
-
-* The fill character, left-edge character, and right-edge character can all be customized, and the padding width can be defined. E.g. if your settings are:
-
-    {
-        "width": 80,
-        "fill_char": "-"
-        "all_caps": true,
-        "strip": true,
-        "left_char": "#",
-        "right_char": "$"
-    }
-
-  ...then the following sample text:
-
-    Ooo, you touch my tralala
-
-  becomes:
-
-    -######################### OOO, YOU TOUCH MY TRALALA #########################$
-
-###Pad: Add Padding to Line or Selection
-
-* Use no selection to pad the entire line.
-
-        This is some text.
-
- becomes
-
-        /*-------------------------- This is some text. --------------------------*/
-
-* Use multiple selections to batch pad.
-
-        /* This is some text. */
-        /* This is some more text. */
-        /* And here is even more text. */
-
- becomes
-
-        /* ----------------------- This is some text. ----------------------- */
-        /* --------------------This is some more text.--------------------- */
-        /* ------------------And here is even more text.------------------- */
+...becomes:
+```
+/* ----------------------- This is some text. ----------------------- */
+/* -------------------- This is some more text. --------------------- */
+/* ------------------ And here is even more text. ------------------- */
+```
 
 * Perform the command on an empty line to fill the entire line with a character.
+```
+ 
+```
 
- ` `
+...becomes:
+```
+**********************************************************************
+```
 
- becomes
-
-        **********************************************************************
 
 Limitations
 -----------
-###Limitations of Pad: centre pad line or selection with * character
-* no syntax-specific settings (e.g. different formatting in Ruby files vs JS files)
-    * WIP: in future it will adapt to syntax, allowing placement of different comment headers in
-      different language files
-* No custom multi-line headers (i.e. lines inserted above and/or below the selection with
-  characters inserted to produce a large, obvious divider in the code)
-* No elimination of left or right-side padding
-* Left and right edge characters still get inserted around text on lines that are already past
-  the column limit
+### Issues with padding around selected text
+*   No custom multi-line headers (i.e. lines inserted above and/or below the selection with characters inserted to produce a large, obvious divider in the code).
+*   No elimination of left or right-side padding.
+*   Left and right edge characters still get inserted around text on lines that are already past the column limit.
 
-###Limitations of Pad: Add Padding to Line or Selection
-* Padding only works for one region of text per line.
-* Multi-line selection padding does not work properly.
-  * Workaround: Use multiple cursors / multiple single-line selections to pad
-    multiple lines at once.
+### Issues adding padding to line or selection
+*   Padding only works for one region of text per line.
+*   Multi-line selection padding does not work properly.
+    *   Workaround: Use multiple cursors / multiple single-line selections to pad multiple lines at once.
