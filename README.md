@@ -1,6 +1,5 @@
-Pad-Comments
-============
-
+Pad Comments (Sublime plugin)
+=============================
 Pad-Comments is a [Sublime Text](http://www.sublimetext.com/) plug-in to add a custom padded
 comment to a line. For example, if the command is run in a JS file with the following text
 selected (and default settings):
@@ -94,8 +93,6 @@ The action automatically strips preceding & trailing whitespace, and capitalizes
 ```
 
 ### Customize padding behaviour
-TODO Finish "Customize padding behaviour" docs to include new settings
-
 The fill character, left-edge character, and right-edge character can all be customized, and the padding width can be defined. E.g. if your settings are:
 ```
 {
@@ -115,6 +112,8 @@ Gr, argh
 ````
 -################################# GR, ARGH ##################################$
 ````
+
+*   TODO Finish "Customize padding behaviour" docs to include new settings
 
 
 ### Add padding to line or selection
@@ -157,10 +156,12 @@ Perform the command on an empty line (with nothing selected) to fill an entire l
 ----------------------------------------------------------------------------------------------------
 Limitations
 -----------
-### Issues with padding around selected text
+### General
 *   No custom multi-line headers (i.e. lines inserted above and/or below the selection with characters inserted to produce a large, obvious divider in the code).
 *   No elimination of left or right-side padding.
 *   Left and right edge characters still get inserted around text on lines that are already past the column limit.
+*   Filling an entire empty line leaves spaces in the middle
+*   "Customize padding behaviour" docs don't include all settings
 
 ### Issues adding padding to line or selection
 *   Padding only works for one region of text per line.
