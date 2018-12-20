@@ -7,6 +7,7 @@
     "all_caps": true,
     "syntax_specific": {
         "bash":                   { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "C":                      { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "clojure":                { "left_char": ";", "fill_char": "*", "right_char": ";" },
         "coffeescript":           { "left_char": "#", "fill_char": "*", "right_char": "#" },
         "css":                    { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
