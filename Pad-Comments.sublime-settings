@@ -21,6 +21,7 @@
         "Elixir":                 { "left_char": "#", "fill_char": "-", "right_char": "#" },
         "erlang":                 { "left_char": "%", "fill_char": "%", "right_char": "%" },
         "Go":                     { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "Gradle":                 { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "Groovy":                 { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "Handlebars":             { "left_char": "{{!--", "fill_char": "-", "right_char": "--}}" },
         "haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
