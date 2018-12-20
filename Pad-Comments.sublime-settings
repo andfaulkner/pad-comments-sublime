@@ -25,6 +25,7 @@
         "haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "Haskell-SublimeHaskell": { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "Haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "Java":                   { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "javascript":             { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "JavaScript (Rails)":     { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "javascriptnext":         { "left_char": "/", "fill_char": "*", "right_char": "/" },
