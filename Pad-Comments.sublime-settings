@@ -20,6 +20,8 @@
         "EEx":                    { "left_char": "<%#", "fill_char": "#", "right_char": "#%>" },
         "Elixir":                 { "left_char": "#", "fill_char": "#", "right_char": "#" },
         "erlang":                 { "left_char": "%", "fill_char": "%", "right_char": "%" },
+        "Groovy":                 { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "Handlebars":             { "left_char": "{{!--", "fill_char": "-", "right_char": "--}}" },
         "haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "Haskell-SublimeHaskell": { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "Haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
