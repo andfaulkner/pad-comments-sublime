@@ -15,6 +15,7 @@
         "Git Ignore":             { "left_char": "#", "fill_char": "#", "right_char": "#" },
         "gitconfig":              { "left_char": "#", "fill_char": "#", "right_char": "#" },
         "gitignore":              { "left_char": "#", "fill_char": "#", "right_char": "#" },
+        "erlang":                 { "left_char": "%", "fill_char": "%", "right_char": "%" },
         "haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "Haskell-SublimeHaskell": { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "Haskell":                { "left_char": "-", "fill_char": "-", "right_char": "-" },
