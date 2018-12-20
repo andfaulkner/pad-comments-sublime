@@ -6,6 +6,7 @@
     "strip": true,
     "all_caps": true,
     "syntax_specific": {
+        "Applescript":            { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "bash":                   { "left_char": "#", "fill_char": "#", "right_char": "#" },
         "C":                      { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "C++":                    { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
