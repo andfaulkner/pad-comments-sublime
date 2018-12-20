@@ -30,6 +30,7 @@
         "javascriptnext":         { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "javascript (babel)":     { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "LESS":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "Lua":                    { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "postcss":                { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "python":                 { "left_char": "#", "fill_char": "*", "right_char": "#" },
         "python.3":               { "left_char": "#", "fill_char": "*", "right_char": "#" },
