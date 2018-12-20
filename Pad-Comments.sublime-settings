@@ -31,6 +31,7 @@
         "javascript (babel)":     { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "LESS":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "Lua":                    { "left_char": "-", "fill_char": "-", "right_char": "-" },
+        "PHP":                    { "left_char": "<!--", "fill_char": "-", "right_char": "-->" },
         "postcss":                { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "python":                 { "left_char": "#", "fill_char": "*", "right_char": "#" },
         "python.3":               { "left_char": "#", "fill_char": "*", "right_char": "#" },
@@ -47,7 +48,7 @@
         "TypescriptReact":        { "left_char": "/", "fill_char": "*", "right_char": "/" },
 
         "html": { "left_char": "<!--",
-                  "fill_char": "*",
+                  "fill_char": "-",
                   "right_char": "-->",
                   "width": 99
         }
