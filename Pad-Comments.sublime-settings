@@ -25,6 +25,7 @@
         "LESS":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "postcss":                { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
         "python":                 { "left_char": "#", "fill_char": "*", "right_char": "#" },
+        "python.3":               { "left_char": "#", "fill_char": "*", "right_char": "#" },
         "Python3":                { "left_char": "#", "fill_char": "*", "right_char": "#" },
         "ruby":                   { "left_char": "#", "fill_char": "*", "right_char": "#" },
         "Ruby on Rails":          { "left_char": "#", "fill_char": "*", "right_char": "#" },
