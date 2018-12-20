@@ -32,6 +32,7 @@
         "javascript (babel)":     { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "Kotlin":                 { "left_char": "/", "fill_char": "*", "right_char": "/" },
         "LESS":                   { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
+        "Lisp":                   { "left_char": ";", "fill_char": "-", "right_char": ";" },
         "Lua":                    { "left_char": "-", "fill_char": "-", "right_char": "-" },
         "PHP":                    { "left_char": "<!--", "fill_char": "-", "right_char": "-->" },
         "postcss":                { "left_char": "/*", "fill_char": "*", "right_char": "*/" },
