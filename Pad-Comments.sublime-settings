@@ -1,8 +1,8 @@
 {
     "width": 100,
-    "left_char": "/",
-    "fill_char": "*",
-    "right_char": "/",
+    "left_char": "/* ",
+    "fill_char": "-",
+    "right_char": " */",
     "strip": true,
     "all_caps": true,
     "syntax_specific": {
