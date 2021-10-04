@@ -158,9 +158,7 @@ class PromptPadCommand(sublime_plugin.WindowCommand):
         self._prompt_control()
 
 ####################################################################################################
-### WIP ThreeLinePadHeaderCommand WIP ###
-### WIP ThreeLinePadHeaderCommand WIP ###
-### WIP ThreeLinePadHeaderCommand WIP ###
+### ThreeLinePadHeaderCommand ###
 class ThreeLinePadHeaderCommand(sublime_plugin.TextCommand):
     DEFAULT_WIDTH = 80
     DEFAULT_FILL_CHAR = "*"
@@ -169,18 +167,9 @@ class ThreeLinePadHeaderCommand(sublime_plugin.TextCommand):
 
     ### WIP ###
     def run(self, edit):
-        print('ok')
-        print('run:')
-        print(sublime_plugin.TextCommand)
-        print(PadCommand.run(self, edit, 'is_heading'))
+        PadCommand.run(self, edit, 'is_heading')
 
-        # for region in self.view.sel():
-        #     line = self.view.line(region)
-        #     contents       = self.view.substr(region)
-        #     replace_region = region
-### END WIP ThreeLinePadHeaderCommand WIP ###
-### END WIP ThreeLinePadHeaderCommand WIP ###
-### END WIP ThreeLinePadHeaderCommand WIP ###
+### END ThreeLinePadHeaderCommand ###
 ####################################################################################################
 
 class PadCommand(sublime_plugin.TextCommand):
